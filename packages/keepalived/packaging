@@ -1,0 +1,9 @@
+set -euxo
+
+tar zxvf keepalived/keepalived-1.3.6.tar.gz
+
+pushd keepalived-1.3.6
+  ./configure --prefix=${BOSH_INSTALL_TARGET}
+  make
+  make install
+popd
